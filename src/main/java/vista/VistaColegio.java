@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.ControladorColegio;
 /**
  *
  * @author alex
@@ -11,6 +12,7 @@ package vista;
 public class VistaColegio extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaColegio.class.getName());
+    private ControladorColegio controlador = new ControladorColegio();
 
     /**
      * Creates new form VistaColegio
