@@ -23,6 +23,11 @@ public class ControladorColegio {
         colegio.agregarEstudiante(e);
     }
     
+    public void agregarProfesor(String nombre, String dir, String tel, String fecha, String cedula, String area, int horas, double salarioHora) {
+        Profesor p = new Profesor(nombre, dir, tel, fecha, cedula, area, horas, salarioHora);
+        colegio.agregarProfesor(p);
+    }
+
 
     
 }
