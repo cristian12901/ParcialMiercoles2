@@ -8,3 +8,23 @@ package modelo;
  *
  * @author alex
  */
+public class Estudiante extends Persona {
+    private String codigoEstudiante;
+    private String grado;
+
+    public Estudiante(String nombre, String direccion, String telefono, String fechaNacimiento, String codigoEstudiante, String grado) {
+        super(nombre, direccion, telefono, fechaNacimiento);
+        this.codigoEstudiante = codigoEstudiante;
+        this.grado = grado;
+    }
+
+    public String getCodigoEstudiante() { return codigoEstudiante; }
+    public void setCodigoEstudiante(String codigoEstudiante) { this.codigoEstudiante = codigoEstudiante; }
+    public String getGrado() { return grado; }
+    public void setGrado(String grado) { this.grado = grado; }
+
+    @Override
+    public String mostrarInformacion() {
+        return super.mostrarInformacion() + " | Codigo: " + codigoEstudiante + " | Grado: " + grado;
+    }
+}
