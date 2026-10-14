@@ -37,6 +37,14 @@ public class ControladorColegio {
         return sb.toString();
     }
     
-
+    public String generarReporteProfesores() {
+        ArrayList<Profesor> profesoresOrdenados = new ArrayList<>(colegio.getListaProfesores());
+        
+        Collections.sort(profesoresOrdenados, new Comparator<Profesor>() {
+            @Override
+            public int compare(Profesor p1, Profesor p2) {
+                return Double.compare(p2.getSalarioTotal(), p1.getSalarioTotal());
+            }
+        });
     
-}
+
